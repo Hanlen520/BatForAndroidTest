@@ -4,3 +4,4 @@ echo 本机ip地址为:
 ipconfig | findstr "IPv4"
 echo ----------------------------------------------------
 ping -n 10 127.0.0.1>nul
+@ECHO ON
