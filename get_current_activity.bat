@@ -3,20 +3,10 @@
 COLOR 0A
 
 ECHO.:::::::::::::::::::::::::::::::::::::::::::::::::
-
 ECHO.::                                             ::
-
 ECHO.::           当前运行的APP包名                 ::
-
 ECHO.::                                             ::
-
 ECHO.:::::::::::::::::::::::::::::::::::::::::::::::::
-
-::**************在此修改目录**************************
-
-SET pcDir=%~dp0
-
-
 
 FOR /F "tokens=3 delims= " %%a in ('adb shell dumpsys window^|find "mCurrentFocus"') do (
 
@@ -27,7 +17,6 @@ FOR /F "tokens=3 delims= " %%a in ('adb shell dumpsys window^|find "mCurrentFocu
         ECHO.[ INFO ] %%i
 
         )
-
 )
 
 ECHO.

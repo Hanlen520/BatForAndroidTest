@@ -1,12 +1,14 @@
 @echo off &setlocal enabledelayedexpansion
 ::set your port
 set PORT_BASE=5555
+
 ::list the device
 adb devices |findstr /i "\<device\>" >nul
 if "%errorlevel%" neq "0" (
 echo "device not found."
 goto :eof
 )
+
 ::set devices serial
 for /f "tokens=1" %%i in ('adb devices^|findstr "\<device\>"') do (
 set device_serial=%%i

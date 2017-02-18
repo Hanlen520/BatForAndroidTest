@@ -8,7 +8,7 @@ ECHO.:::::::::::::::::::::::::::::::::::::::::::::::::
 
 REM 方法一：手动设置Monkey日志路径
 
-SET monkeyLogFile=F:\Monkey\1.0.0\20140825181801_monkey.log
+SET monkeyLogFile=F:\Monkey\V1.0.0\20140825181801_monkey.log
 
 
 

@@ -1,13 +1,9 @@
 @ECHO OFF
 
 ECHO.:::::::::::::::::::::::::::::::::::::::::::::::::
-
 ECHO.::                                             ::
-
 ECHO.::             查看APK签名信息                 ::
-
 ECHO.::                                             ::
-
 ECHO.:::::::::::::::::::::::::::::::::::::::::::::::::
 
 Color 0A
@@ -34,16 +30,11 @@ IF "%~x1"==".keystore" GOTO KEYSTOREFile
 
 IF "%~x1"==".KEYSTORE" GOTO KEYSTOREFile
 
-
-
 Color 0D
-
-ECHO.[ INFO ] 你是猴子派来的逗逼吧？
 
 ECHO.[ HELP ] 请将RSA或得APK或者keystore拖至Bat文件上
 
 GOTO BATend
-
 
 
 :KEYSTOREFile
@@ -63,7 +54,6 @@ type "%C_PATH%%~nx1.txt"
 GOTO BATend
 
 
-
 :RSAFile
 
 DEL "%C_PATH%%~n1.RSA.txt" 2>nul
@@ -79,7 +69,6 @@ keytool -printcert -file %apkorFile% > "%C_PATH%%~n1.RSA.txt"
 type "%C_PATH%%~n1.RSA.txt"
 
 GOTO BATend
-
 
 
 :APKFile

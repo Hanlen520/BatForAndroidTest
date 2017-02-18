@@ -8,7 +8,7 @@ ECHO [等待插入手机...]
 
 adb wait-for-device
 
-ECHO [安装] %~nx1
+ECHO [覆盖安装] %~nx1
 
 adb install -r %1
 

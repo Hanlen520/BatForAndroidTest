@@ -1,4 +1,5 @@
 @ECHO OFF 
+
 ECHO [读取手机信息]
 
 ECHO -------------------------------
@@ -25,11 +26,9 @@ ECHO.手机型号: %model%
 
 ECHO.系统版本: Android %androidOS%
 
-
-
 ECHO.-------------------------------
 
-ECHO.手机品牌: %brand%>"%~dp0\Phone_%model%.txt"
+ECHO.手机品牌: %brand%>>"%~dp0\Phone_%model%.txt"
 
 ECHO.手机型号: %model%>>"%~dp0\Phone_%model%.txt"
 

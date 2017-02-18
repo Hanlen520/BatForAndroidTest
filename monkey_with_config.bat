@@ -1,9 +1,7 @@
 @ECHO OFF
 
 ECHO.:::::::::::::::::::::::::::::::::::::::::::::::::
-
 ECHO.::                 Monkey测试                  ::
-
 ECHO.:::::::::::::::::::::::::::::::::::::::::::::::::
 
 IF NOT EXIST %~dp0\config.conf GOTO EXIT
@@ -11,8 +9,6 @@ IF NOT EXIST %~dp0\config.conf GOTO EXIT
 ECHO.[ INFO ] 准备Monkey测试
 
 ECHO.[ INFO ] 读取config.conf中信息
-
-
 
 REM 从配置文件中获得包名
 
@@ -27,10 +23,10 @@ FOR /F "tokens=1,2 delims==" %%a in (config.conf) do (
 )
 
 
-
 REM 获取日期,格式为：20140808
 
 SET c_date=%date:~0,4%%date:~5,2%%date:~8,2%
+
 
 REM 获取得小时,格式为：24小时制，10点前补0
 
@@ -42,6 +38,7 @@ SET c_time=0%time:~1,1%
 
 )
 
+
 REM 组合小时、分、秒，格式为: 131420
 
 SET c_time=%c_time%%time:~3,2%%time:~6,2%
@@ -49,9 +46,6 @@ SET c_time=%c_time%%time:~3,2%%time:~6,2%
 REM 将当运行时间点做为日志文件名
 
 SET logfilename=%c_date%%c_time%
-
-
-
 
 
 REM 创建当天日期目录及测试APP日志保存目录
@@ -67,8 +61,6 @@ IF NOT EXIST %logdir% (
     md %logdir%
 
 )
-
-
 
 
 
@@ -175,8 +167,6 @@ REM ECHO.
 REM ECHO.[ Exec ] 导出traces文件
 
 REM adb shell cat /data/anr/traces.txt>%logfilename%_traces.log
-
-
 
 
 
