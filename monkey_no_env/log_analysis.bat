@@ -2,17 +2,13 @@
 
 ECHO.:::::::::::::::::::::::::::::::::::::::::::::::::
 
-ECHO.::             分析Monkey日志                  ::
-
-ECHO.::             版本  V1.0.1                    ::
-
-ECHO.::             时间：2014.08.26                ::
+ECHO.::             分析logcat日志                  ::
 
 ECHO.:::::::::::::::::::::::::::::::::::::::::::::::::
 
 REM 方法一：手动设置Monkey日志路径
 
-SET monkeyLogFile=F:\Monkey\20140808\FindyouV1.0.0\20140825181801_monkey.log
+SET monkeyLogFile=F:\Monkey\V1.0.0\20140825181801_monkey.log
 
 
 
@@ -22,7 +18,7 @@ IF NOT "%1"=="" SET monkeyLogFile=%1
 
 
 
-ECHO.[ INFO ] Monkey日志: %monkeyLogFile%
+ECHO.[ INFO ] logcat日志: %monkeyLogFile%
 
 ECHO.[ INFO ] 开始分析
 
