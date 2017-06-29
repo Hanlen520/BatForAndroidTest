@@ -24,11 +24,11 @@ SET /P SCTIME=[ INFO ] 请输入录制时间(默认10S):
 
 :MyLoop
 
-SET CONFIRM=Findyou
+SET CONFIRM=TF
 
 SET /P CONFIRM=[ INFO ] 确认开始录制？[Enter]
 
-IF NOT "%CONFIRM%"=="Findyou" GOTO MyLoop
+IF NOT "%CONFIRM%"=="TF" GOTO MyLoop
 
 ECHO.
 
